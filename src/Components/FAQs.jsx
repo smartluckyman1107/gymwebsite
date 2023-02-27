@@ -8,7 +8,7 @@ const FAQs = () => {
     const [faqs, setFaqs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/faqs.json').then((response) => response.json().then((data, error) => {
+        fetch('https://minniegymsite-api.vercel.app/faqs').then((response) => response.json().then((data, error) => {
             setFaqs(data);
             console.log(data);
         })).catch((error) => { console.log(error); })
